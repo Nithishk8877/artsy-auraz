@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>artsy_auraz | Handmade Gifts</title>
+    <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/order.css">
+</head>
+<body>
+
+  <header class="hero">
+    <h1>Artsy Auraz</h1>
+    <p>Handmade &amp; custom gifts, made with love</p>
+    <a class="insta-btn" href="https://www.instagram.com/artsy_auraz/" target="_blank">Follow on Instagram</a>
+  </header>
+
+  <section class="info-bar">
+    <span>Pre-paid orders only</span>
+    <span>Making time: 7-10 days</span>
+    <span>Madurai</span>
+  </section>
+
+  <main class="container">
+    <div class="toolbar">
+      <input type="text" id="search" placeholder="Search gifts...">
+    </div>
+
+    <div id="categories" class="categories"></div>
+
+    <div id="products" class="grid"></div>
+    <p id="empty" class="empty" hidden>No products found.</p>
+  </main>
+
+  <footer>
+    <p>artsy_auraz &copy; 2026 | Madurai | DM on Instagram for queries</p>
+  </footer>
+
+    <div id="order-modal" class="modal" hidden>
+    <div class="modal-box">
+      <button type="button" class="modal-close" id="modal-close">&times;</button>
+
+      <div id="form-view">
+        <h2>Place Order</h2>
+        <p id="modal-product" class="modal-product"></p>
+        <form id="order-form">
+          <label>Your Name *
+            <input type="text" name="name" required>
+          </label>
+          <label>Phone Number *
+            <input type="tel" name="phone" pattern="[0-9]{10}" title="Enter 10 digit phone number" required>
+          </label>
+          <label>Delivery Address *
+            <textarea name="address" rows="3" required></textarea>
+          </label>
+          <label>Quantity
+            <input type="number" name="quantity" value="1" min="1" max="20" required>
+          </label>
+          <label>Customization Note
+            <textarea name="note" rows="3" placeholder="Name, date, colour, message..."></textarea>
+          </label>
+          <p class="total">Total: <strong id="order-total"></strong></p>
+          <p id="form-error" class="form-error"></p>
+          <button type="submit" class="submit-btn" id="submit-btn">Place Order</button>
+        </form>
+      </div>
+
+      <div id="success-view" hidden>
+        <h2>Order Placed! 🎉</h2>
+        <p>Order ID: <strong id="s-id"></strong></p>
+        <p>Total: <strong id="s-total"></strong></p>
+        <p>Expected delivery: <strong id="s-date"></strong></p>
+        <p class="pay-note">
+          This is a pre-paid order. Please DM us on Instagram (@artsy_auraz) with your
+          Order ID to get the UPI payment details. Making starts after payment.
+        </p>
+        <button type="button" class="submit-btn" id="success-close">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/main.js"></script>
+  <script src="/static/order.js"></script>
+</body>
+</html>

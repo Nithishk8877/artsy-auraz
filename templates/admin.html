@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin | artsy_auraz</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/admin.css">
+</head>
+<body>
+
+  <header class="admin-header">
+    <h1>artsy_auraz Admin</h1>
+        <span>
+      <a href="/">View shop</a> &nbsp;|&nbsp; <a href="/logout">Logout</a>
+    </span>
+  </header>
+
+  <main class="admin-wrap">
+
+    <section class="panel">
+      <h2>Orders</h2>
+      <div class="filter-row">
+        <label>Filter by status:
+          <select id="status-filter"></select>
+        </label>
+      </div>
+      <div id="orders"></div>
+      <p id="orders-empty" class="muted" hidden>No orders found.</p>
+    </section>
+
+    <section class="panel">
+      <h2>Add Product</h2>
+      <form id="product-form" class="product-form">
+        <label>Name *
+          <input type="text" name="name" required>
+        </label>
+        <label>Category *
+          <select name="category_id" id="p-category" required></select>
+        </label>
+        <label>Price (₹) *
+          <input type="number" name="price" min="1" step="any" required>
+        </label>
+                <label>Product Photo (optional)
+          <input type="file" name="image" accept="image/png,image/jpeg,image/webp">
+        </label>
+        <label class="wide">Description
+          <textarea name="description" rows="2"></textarea>
+        </label>
+        <button type="submit" class="btn">Add Product</button>
+        <span id="product-msg" class="muted"></span>
+      </form>
+    </section>
+
+    <section class="panel">
+      <h2>Products</h2>
+      <div id="admin-products"></div>
+    </section>
+
+  </main>
+
+  <script src="/static/admin.js"></script>
+</body>
+</html>

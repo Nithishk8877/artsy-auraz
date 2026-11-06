@@ -1,0 +1,151 @@
+# ==============================
+# Python
+# ==============================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+wheels/
+pip-wheel-metadata/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# ==============================
+# Virtual Environments
+# ==============================
+.venv/
+venv/
+env/
+ENV/
+.python-version
+
+# ==============================
+# Flask
+# ==============================
+instance/
+.webassets-cache/
+flask_session/
+*.log
+
+# ==============================
+# Environment & Secrets
+# ==============================
+.env
+.env.*
+!.env.example
+!.env.sample
+*.pem
+*.key
+*.crt
+secrets/
+credentials/
+config.local.py
+
+# ==============================
+# Database
+# ==============================
+*.db
+*.sqlite
+*.sqlite3
+instance/*.db
+instance/*.sqlite
+instance/*.sqlite3
+
+# ==============================
+# SQLAlchemy / Migrations
+# ==============================
+*.sqlite-journal
+alembic/__pycache__/
+
+# ==============================
+# HTML / Frontend Build
+# ==============================
+node_modules/
+dist/
+build/
+.vite/
+.next/
+.nuxt/
+.svelte-kit/
+coverage/
+
+# ==============================
+# Static Assets & Generated Files
+# ==============================
+uploads/
+storage/
+media/
+tmp/
+temp/
+.cache/
+
+# ==============================
+# IDE & Editors
+# ==============================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# ==============================
+# OS Files
+# ==============================
+.DS_Store
+Thumbs.db
+desktop.ini
+.Trash-*
+
+# ==============================
+# Testing
+# ==============================
+.tox/
+.nox/
+nosetests.xml
+coverage.xml
+test-results/
+playwright-report/
+test-results/
+
+# ==============================
+# Jupyter
+# ==============================
+.ipynb_checkpoints/
+
+# ==============================
+# Package Managers
+# ==============================
+pip-log.txt
+pip-delete-this-directory.txt
+poetry.lock
+Pipfile.lock
+
+# ==============================
+# Local Development
+# ==============================
+*.pid
+*.seed
+*.out
+debug.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# ==============================
+# Backups
+# ==============================
+*.bak
+*.backup
+*.old
+*.orig
